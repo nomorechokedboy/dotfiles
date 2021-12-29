@@ -133,6 +133,12 @@ local install = {
     config = function()
       require("config.lualine").setup()
     end
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("config.gitsigns").setup()
+    end
   }
 }
 
