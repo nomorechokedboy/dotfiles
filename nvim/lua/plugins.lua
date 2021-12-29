@@ -1,14 +1,7 @@
 local map = vim.api.nvim_set_keymap
-local lazy_load_snip = {
-  "javascript",
-  "typescript",
-  "typescriptreact",
-  "html",
-  "css",
-  "scss",
-  "lua"
-}
-
+local constants = require("constant")
+local my_opts = constants.my_opts
+local lazy_load_snip = constants.lazy_load_snip
 local install = {
   {
     "cpea2506/one_monokai.nvim"
@@ -74,14 +67,6 @@ local install = {
         "williamboman/nvim-lsp-installer"
       }
     }
-    -- config = function()
-    -- 	require("lspconfig").tsserver.setup({
-    -- 		on_attach = function(client)
-    -- 			client.resolved_capabilities.document_formatting = false
-    -- 			client.resolved_capabilities.document_range_formatting = false
-    -- 		end,
-    -- 	})
-    -- end,
   },
   {
     "dsznajder/vscode-es7-javascript-react-snippets",
@@ -153,26 +138,10 @@ local install = {
 
 require("config").plugin_install(install)
 
-map("n", "<C-s>", ":Format<CR>", {noremap = true})
-map("n", "<C-b>", ":NvimTreeToggle<CR>", {noremap = true})
-map("n", "<leader>r", ":NvimTreeRefresh<CR>", {noremap = true})
-map("n", "<C-p>", ":Telescope find_files<CR>", {noremap = true})
-map("n", "<S-f>", ":Telescope buffers<CR>", {noremap = true})
+map("n", "<C-s>", ":Format<CR>", my_opts)
+map("n", "<C-b>", ":NvimTreeToggle<CR>", my_opts)
+map("n", "<leader>r", ":NvimTreeRefresh<CR>", my_opts)
+map("n", "<C-p>", ":Telescope find_files<CR>", my_opts)
+map("n", "<S-f>", ":Telescope buffers<CR>", my_opts)
 vim.opt.number = true
 vim.opt.undofile = true
--- Move current line / block
---[[ ["<A-j>"] = ":m .+1<CR>==",
-["<A-k>"] = ":m .-2<CR>==",
--- Better indenting
-["<"] = "<gv",
-[">"] = ">gv",
- visual_block_mode = {
-        -- Move selected line / block of text in visual mode
-        ["K"] = ":move '<-2<CR>gv-gv",
-        ["J"] = ":move '>+1<CR>gv-gv",
-
-        -- Move current line / block
-        ["<A-j>"] = ":m '>+1<CR>gv-gv",
-        ["<A-k>"] = ":m '<-2<CR>gv-gv",
-    }, ]]
-
