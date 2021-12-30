@@ -29,7 +29,6 @@ local install = {
     config = function()
       require("config.autopairs").setup()
     end,
-    event = "InsertCharPre"
   },
   {
     "hrsh7th/nvim-cmp",
