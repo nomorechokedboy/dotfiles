@@ -28,7 +28,7 @@ local install = {
     "windwp/nvim-autopairs",
     config = function()
       require("config.autopairs").setup()
-    end,
+    end
   },
   {
     "hrsh7th/nvim-cmp",
@@ -79,7 +79,10 @@ local install = {
   },
   {
     "nvim-telescope/telescope.nvim",
-    requires = {{"nvim-lua/plenary.nvim"}}
+    requires = {{"nvim-lua/plenary.nvim"}},
+    config = function()
+      require("config.telescope").setup()
+    end
   },
   {
     "kyazdani42/nvim-tree.lua",
@@ -142,11 +145,6 @@ local install = {
 }
 
 require("config").plugin_install(install)
-
-map("n", "<C-s>", ":Format<CR>", my_opts)
-map("n", "<C-b>", ":NvimTreeToggle<CR>", my_opts)
-map("n", "<leader>r", ":NvimTreeRefresh<CR>", my_opts)
-map("n", "<C-p>", ":Telescope find_files<CR>", my_opts)
-map("n", "<S-f>", ":Telescope buffers<CR>", my_opts)
+require('config.keymaps').setup()
 vim.opt.number = true
 vim.opt.undofile = true

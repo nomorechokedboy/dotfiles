@@ -33,7 +33,7 @@ local config = {
   },
   filters = {
     dotfiles = false,
-    custom = {}
+    custom = {".git", "node_modules", "dist", "build"}
   },
   git = {
     enable = true,
