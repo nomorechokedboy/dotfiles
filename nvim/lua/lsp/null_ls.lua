@@ -17,36 +17,36 @@ local config_source = function(custom_configs)
 		)
 	end
 
-	-- for _, config in pairs(custom_configs.diagnostics) do
-	-- 	local source = config.exe
-	--
-	-- 	table.insert(configs, null_ls.builtins.diagnostics[source])
-	-- end
+	for _, config in pairs(custom_configs.diagnostics) do
+		local source = config.exe
+
+		table.insert(configs, null_ls.builtins.diagnostics[source])
+	end
 
 	return configs
+end
+
+M.list_active_sources = function(filetype, method)
+	local info = require("null-ls.info")
+	local spec_method = require("null-ls.methods").internal[method]
+
+	local active_sources = info.get_active_sources(filetype)
+	return active_sources[spec_method] or {}
 end
 
 M.setup = function()
 	null_ls.setup({
 		sources = config_source({
 			formatting = {
-				{ exe = "prettierd" },
-				{ exe = "stylua", filetypes = { "lua" } },
+				{ exe = "prettier" },
+				{ exe = "rustfmt" },
+				{ exe = "stylua" },
 			},
 			diagnostics = {
-				{},
+				{ exe = "eslint_d" },
+				{ exe = "stylelint" },
 			},
 		}),
-		on_attach = function(client)
-			if client.resolved_capabilities.document_formatting then
-				vim.cmd([[
-augroup format_on_save
-autocmd!
-autocmd BufWritePre * :lua vim.lsp.buf.formatting_sync()
-augroup END
-]])
-			end
-		end,
 	})
 end
 

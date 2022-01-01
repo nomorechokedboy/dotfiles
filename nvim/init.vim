@@ -8,7 +8,10 @@ colorscheme one_monokai
 " hi TelescopeBorder ctermbg=none guibg=none
 " hi NvimTreeNormal ctermbg=none guibg=none
 " let &fcs='eob: '
-hi LineNr guifg=#9254d9
+" hi LineNr guifg=#9254d9
+" hi LineNr guifg=#00A3EE
+" hi LineNr guifg=#0093EA
+hi LineNr guifg=#00D4FF
 
 lua require('init')
 
