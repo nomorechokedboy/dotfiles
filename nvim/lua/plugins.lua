@@ -134,6 +134,12 @@ local install = {
 			require("config.gitsigns").setup()
 		end,
 	},
+	{
+		"romgrk/barbar.nvim",
+	},
+	{
+		"wakatime/vim-wakatime",
+	},
 }
 
 require("config").plugin_install(install)
@@ -142,3 +148,4 @@ require("utils.autocmd").setup()
 require("lsp.lspconfig").setup()
 vim.opt.number = true
 vim.opt.undofile = true
+vim.opt.clipboard = "unnamedplus"

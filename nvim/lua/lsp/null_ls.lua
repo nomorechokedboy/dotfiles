@@ -38,7 +38,7 @@ M.setup = function()
 	null_ls.setup({
 		sources = config_source({
 			formatting = {
-				{ exe = "prettier" },
+				{ exe = "prettierd" },
 				{ exe = "rustfmt" },
 				{ exe = "stylua" },
 			},
