@@ -6,9 +6,12 @@
   "security.workspace.trust.untrustedFiles": "open",
   "files.exclude": {
     "**/.classpath": true,
+    "**/.factorypath": true,
     "**/.project": true,
     "**/.settings": true,
-    "**/.factorypath": true
+    "**/build": true,
+    "**/dist": true,
+    "**/out": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[csharp]": {
@@ -192,12 +195,12 @@
   //Vscode color brackets
   "editor.bracketPairColorization.enabled": true,
   "code-runner.clearPreviousOutput": true,
-  "workbench.colorTheme": "Sublime Material Theme - Dark",
-  "discord.lowerDetailsNoWorkspaceFound": "MERN is love",
-  "discord.lowerDetailsEditing": "MERN is da wae",
-  "discord.lowerDetailsIdling": "MERN is future",
-  "discord.detailsIdling": "Learning MERN",
-  "discord.largeImageIdling": "MERN is life",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "discord.lowerDetailsNoWorkspaceFound": "Mernalism",
+  "discord.lowerDetailsEditing": "Mernalism",
+  "discord.lowerDetailsIdling": "Mernalism",
+  "discord.detailsIdling": "Mernalism",
+  "discord.largeImageIdling": "Mernalism",
   "explorer.confirmDragAndDrop": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[java]": {
@@ -210,5 +213,17 @@
   "javascript.inlayHints.variableTypes.enabled": true,
   "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.inlayHints.variableTypes.enabled": true,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/build/**": true,
+    "**/out/**": true,
+    "**/dist/**": true
+  },
+  "[nginx]": {
+    "editor.defaultFormatter": "raynigon.nginx-formatter"
+  }
 }

@@ -23,6 +23,8 @@ local on_attach = function(client, _)
 		"stylelint_lsp",
 	}
 
+	vim.fn["vsnip#get_complete_items"](vim.fn["bufnr"]())
+
 	for _, server in pairs(disable_fmt) do
 		if client.name == server then
 			client.resolved_capabilities.document_formatting = false
