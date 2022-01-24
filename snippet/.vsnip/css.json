@@ -1,0 +1,12 @@
+{
+  "Text trunkcate": {
+    "prefix": "textTrunkcate",
+    "body": [
+      "-webkit-line-clamp: ${0:line};\n",
+      "-webkit-box-orient: vertical;\n",
+      "overflow: hidden;",
+      "display: -webkit-box;"
+    ],
+    "description": "Trunkcate text"
+  }
+}
