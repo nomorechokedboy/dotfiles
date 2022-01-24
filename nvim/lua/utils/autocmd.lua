@@ -2,8 +2,8 @@ local M = {}
 
 local config = {
 	packer_on_save = {
-		{ "BufWritePost", "init.lua", "PackerInstall" },
-		{ "BufWritePost", "init.lua", "PackerCompile" },
+		{ "BufWritePost", "plugins.lua", "PackerInstall" },
+		{ "BufWritePost", "plugins.lua", "PackerCompile" },
 	},
 	format_on_save = {
 		{ "BufWritePre", "*", "lua vim.lsp.buf.formatting_sync()" },

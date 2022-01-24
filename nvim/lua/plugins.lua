@@ -142,6 +142,7 @@ local install = {
 	{
 		"wakatime/vim-wakatime",
 	},
+	{ "tamago324/nlsp-settings.nvim" },
 }
 
 require("config").plugin_install(install)
