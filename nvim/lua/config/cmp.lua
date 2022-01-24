@@ -39,8 +39,14 @@ M.setup = function()
 		},
 		formatting = {
 			fields = { "kind", "abbr" },
-			format = function(_, vim_item)
+			format = function(entry, vim_item)
 				vim_item.kind = cmp_kinds[vim_item.kind] or ""
+				--[[ vim_item.menu = ({
+					nvim_lsp = "[LSP]",
+					vsnip = "[Snippet]",
+					buffer = "[Buffer]",
+					path = "[Path]",
+				})[entry.source.name] ]]
 				return vim_item
 			end,
 		},
@@ -86,7 +92,7 @@ M.setup = function()
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
 			{ name = "vsnip" },
-		}, {
+			{ name = "path" },
 			{ name = "buffer" },
 		}),
 	})
@@ -104,18 +110,6 @@ M.setup = function()
 			{ name = "cmdline" },
 		}),
 	})
-
-	--[[ local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
-  local lsp_installer = require("nvim-lsp-installer")
-
-  lsp_installer.on_server_ready(
-    function(server)
-      local opts = {
-        capabilities = capabilities
-      }
-      server:setup(opts)
-    end
-  ) ]]
 end
 
 return M

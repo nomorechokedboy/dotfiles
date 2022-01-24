@@ -9,6 +9,7 @@ local install = {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
+		commit = "fbbcfa7b6c0841e19f39836a7c5561fd9cc6900f",
 		config = function()
 			require("config.treesitter").setup()
 		end,
@@ -67,6 +68,7 @@ local install = {
 	},
 	{
 		"dsznajder/vscode-es7-javascript-react-snippets",
+		commit = "89f27c53bb447bd02f92c615aecbd149689bc2a8",
 		run = "yarn install --frozen-lockfile && yarn compile",
 		ft = {
 			"javascript",
