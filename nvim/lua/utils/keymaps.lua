@@ -36,6 +36,7 @@ M.setup = function()
 			["<leader>r"] = ":NvimTreeRefresh<CR>",
 			["<S-f>"] = ":Telescope buffers<CR>",
 			["<A-O>"] = ":OrganizeImports<CR>",
+			["<A-s>"] = ":wa<CR>",
 		},
 		visual = {
 			["<C-s>"] = ":w!<CR>",

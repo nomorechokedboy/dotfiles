@@ -3,6 +3,7 @@ local M = {}
 local config = {
 	packer_on_save = {
 		{ "BufWritePost", "plugins.lua", "PackerInstall" },
+		{ "BufWritePost", "plugins.lua", "PackerClean" },
 		{ "BufWritePost", "plugins.lua", "PackerCompile" },
 	},
 	format_on_save = {

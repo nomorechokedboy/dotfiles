@@ -143,6 +143,13 @@ local install = {
 		"wakatime/vim-wakatime",
 	},
 	{ "tamago324/nlsp-settings.nvim" },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("config.indent").setup()
+		end,
+	},
+	{ "JoosepAlviste/nvim-ts-context-commentstring" },
 }
 
 require("config").plugin_install(install)
@@ -152,3 +159,4 @@ require("lsp.lspconfig").setup()
 vim.opt.number = true
 vim.opt.undofile = true
 vim.opt.clipboard = "unnamedplus"
+vim.opt.tabstop = 2

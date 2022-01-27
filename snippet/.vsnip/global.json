@@ -11,12 +11,12 @@
   },
   "styles": {
     "prefix": "styles",
-    "body": "import styles from './${0:styles}.module.scss';",
+    "body": "import styles from './${0:styles}';",
     "description": "import styles for scss"
   },
   "styles-css": {
     "prefix": "styles-css",
-    "body": "import styles from './${0:styles}.module.css';",
+    "body": "import styles from './${0:styles}';",
     "description": "import styles for scss"
   },
   "controller": {

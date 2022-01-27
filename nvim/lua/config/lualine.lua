@@ -33,17 +33,6 @@ local lsp_client = {
 			end
 		end
 
-		local null_ls = require("null-ls")
-		-- add formatter
-		local format_method = null_ls.methods.FORMATTING
-		local supported_formatters = list_registered(buf_ft, format_method)
-		vim.list_extend(buf_client_names, supported_formatters)
-
-		-- add linter
-		local linter_method = null_ls.methods.DIAGNOSTICS
-		local supported_linters = list_registered(buf_ft, linter_method)
-		vim.list_extend(buf_client_names, supported_linters)
-
 		return table.concat(buf_client_names, ", ")
 	end,
 	icon = " LSP:",
