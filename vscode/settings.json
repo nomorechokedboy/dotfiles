@@ -195,7 +195,7 @@
   //Vscode color brackets
   "editor.bracketPairColorization.enabled": true,
   "code-runner.clearPreviousOutput": true,
-  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.colorTheme": "Atom One Dark",
   "discord.lowerDetailsNoWorkspaceFound": "Mernalism",
   "discord.lowerDetailsEditing": "Mernalism",
   "discord.lowerDetailsIdling": "Mernalism",

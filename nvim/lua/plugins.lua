@@ -150,6 +150,8 @@ local install = {
 		end,
 	},
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
+	{ "LunarVim/onedarker.nvim" },
+	{ "navarasu/onedark.nvim" },
 }
 
 require("config").plugin_install(install)
@@ -160,3 +162,4 @@ vim.opt.number = true
 vim.opt.undofile = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2

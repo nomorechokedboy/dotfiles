@@ -19,6 +19,9 @@ local config = {
 		{ "ColorScheme", "*", "hi TelescopeBorder guibg=none" },
 		{ "ColorScheme", "*", "hi NvimTreeNormal guibg=none" },
 	}, ]]
+	theme = {
+		{ "BufEnter", "*.rs", ":colorscheme onedark" },
+	},
 	yank_highlight = {
 		{
 			"TextYankPost",

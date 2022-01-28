@@ -1,6 +1,6 @@
 syntax on
 set termguicolors
-colorscheme one_monokai
+colorscheme onedarker
 " hi Normal ctermbg=none guibg=none
 " hi SignColumn ctermbg=none guibg=none
 " hi NormalNC ctermbg=none guibg=none
