@@ -152,6 +152,14 @@ local install = {
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
 	{ "LunarVim/onedarker.nvim" },
 	{ "navarasu/onedark.nvim" },
+	{
+		"saecki/crates.nvim",
+		tag = "v0.1.0",
+		config = function()
+			require("config.crates").setup()
+		end,
+		event = { "BufRead Cargo.toml" },
+	},
 }
 
 require("config").plugin_install(install)
@@ -163,3 +171,10 @@ vim.opt.undofile = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
+require("onedark").setup({
+	style = "warmer",
+})
+local themes = { "one_monokai", "onedark", "onedarker" }
+local random_themes = themes[math.random(1, #themes)]
+
+vim.cmd("colorscheme " .. random_themes)

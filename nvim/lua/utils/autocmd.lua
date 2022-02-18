@@ -9,6 +9,9 @@ local config = {
 	format_on_save = {
 		{ "BufWritePre", "*", "lua vim.lsp.buf.formatting_sync()" },
 	},
+	lazy_load_crate = {
+		{ "FileType", "Cargo.toml", "<cmd>lua require('cmp').setup.buffer { sources = { { name = 'crates' } } }" },
+	},
 	--[[ transparent_window = {
 		{ "ColorScheme", "*", "hi Normal guibg=none" },
 		{ "ColorScheme", "*", "hi SignColumn guibg=none" },
@@ -19,9 +22,9 @@ local config = {
 		{ "ColorScheme", "*", "hi TelescopeBorder guibg=none" },
 		{ "ColorScheme", "*", "hi NvimTreeNormal guibg=none" },
 	}, ]]
-	theme = {
-		{ "BufEnter", "*.rs", ":colorscheme onedark" },
-	},
+	--[[ theme = {
+		{ "BufEnter", "*.rs", ":colorscheme one_monokai" },
+	}, ]]
 	yank_highlight = {
 		{
 			"TextYankPost",

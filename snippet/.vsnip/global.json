@@ -14,11 +14,6 @@
     "body": "import styles from './${0:styles}';",
     "description": "import styles for scss"
   },
-  "styles-css": {
-    "prefix": "styles-css",
-    "body": "import styles from './${0:styles}';",
-    "description": "import styles for scss"
-  },
   "controller": {
     "prefix": "controller",
     "body": "const ${0:controllerName} = (req: Request, res: Response) => {\n\n}"

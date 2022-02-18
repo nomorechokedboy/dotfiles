@@ -94,6 +94,7 @@ M.setup = function()
 			{ name = "vsnip" },
 			{ name = "path" },
 			{ name = "buffer" },
+			{ name = "crates" },
 		}),
 	})
 
