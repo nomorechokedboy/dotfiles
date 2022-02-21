@@ -124,7 +124,7 @@
   "editor.wordWrapColumn": 120,
   "redhat.telemetry.enabled": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh (2)",
   "terminal.integrated.profiles.linux": {
     "zsh": {
       "path": "zsh"
@@ -195,7 +195,7 @@
   //Vscode color brackets
   "editor.bracketPairColorization.enabled": true,
   "code-runner.clearPreviousOutput": true,
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "One Dark Pro",
   "discord.lowerDetailsNoWorkspaceFound": "Mernalism",
   "discord.lowerDetailsEditing": "Mernalism",
   "discord.lowerDetailsIdling": "Mernalism",
@@ -265,5 +265,6 @@
     // This results in code completion suggesting words when editing comments and
     // strings. This setting will prevent that.
     "editor.wordBasedSuggestions": false
-  }
+  },
+  "window.titleBarStyle": "custom"
 }
