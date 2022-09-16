@@ -1,0 +1,10 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# Isolated development environments using Docker
+brew "docker-compose"
+# GNU compiler collection
+brew "gcc"
+# Manage multiple Node.js versions
+brew "nvm"
