@@ -187,7 +187,7 @@ bar {
 	position top	
 	status_command ~/.config/bumblebee-status/bumblebee-status \
 	-t iceberg-rainbow \
- 	-m pomodoro datetime arch_update aur-update nic disk memory nvidiagpu cpu battery redshift pasink git hostname \
+ 	-m pomodoro datetime arch_update aur-update nic disk memory nvidiagpu cpu battery redshift pasink bluetooth2 docker_ps git hostname \
 	-p memory.format="{used} ({percent:05.02f}%)" disk.format="{used} ({percent:05.02f}%)" nic.format="{ip} {ssid} {strength}" nvidiagpu.format="{temp}°C %{mem_used} MiB {fanspeed}" pomodoro.format="%mm" pomodoro.notify="pomodoro-notify" 
 }
 
