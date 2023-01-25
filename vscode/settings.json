@@ -224,5 +224,8 @@
         "workbench.activityBar.visible": false,
         "editor.tabSize": 8,
         "prettier.tabWidth": 8,
-        "editor.lineNumbers": "relative"
+        "editor.lineNumbers": "relative",
+        "[go]": {
+                "editor.defaultFormatter": "golang.go"
+        }
 }
