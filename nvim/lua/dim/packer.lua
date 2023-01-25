@@ -94,4 +94,11 @@ return require('packer').startup(function(use)
         "akinsho/toggleterm.nvim",
         -- keys = { "<C-t>" },
     }
+    use {
+        'akinsho/git-conflict.nvim',
+        tag = "*",
+        config = function()
+            require('git-conflict').setup()
+        end
+    }
 end)
