@@ -221,11 +221,12 @@
         "css.validate": false,
         "window.menuBarVisibility": "compact",
         "vitest.enable": true,
-        "workbench.activityBar.visible": false,
         "editor.tabSize": 8,
         "prettier.tabWidth": 8,
         "editor.lineNumbers": "relative",
         "[go]": {
                 "editor.defaultFormatter": "golang.go"
-        }
+        },
+        "workbench.activityBar.visible": false,
+        "go.toolsManagement.autoUpdate": true
 }
