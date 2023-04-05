@@ -228,5 +228,6 @@
                 "editor.defaultFormatter": "golang.go"
         },
         "workbench.activityBar.visible": false,
-        "go.toolsManagement.autoUpdate": true
+        "go.toolsManagement.autoUpdate": true,
+        "diffEditor.ignoreTrimWhitespace": false
 }
