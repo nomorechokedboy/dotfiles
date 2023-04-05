@@ -102,4 +102,5 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("andweeb/presence.nvim")
+	use("nvim-treesitter/nvim-treesitter-context")
 end)
