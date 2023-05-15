@@ -103,4 +103,14 @@ return require("packer").startup(function(use)
 	})
 	use("andweeb/presence.nvim")
 	use("nvim-treesitter/nvim-treesitter-context")
+	use({
+		"olexsmir/gopher.nvim",
+		config = function(_, otps)
+			require("gopher").setup(otps)
+		end,
+		ft = "go",
+		run = function()
+			vim.cmd([[silent! GoInstallDeps]])
+		end,
+	})
 end)

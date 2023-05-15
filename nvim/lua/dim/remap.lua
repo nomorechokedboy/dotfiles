@@ -14,7 +14,6 @@ function key_map(keys)
             vim.keymap.set(key_mode, key, value, opts)
         end
     end
-
 end
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -59,24 +58,27 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>gsj", "<cmd> GoTagAdd json <CR>")
+vim.keymap.set("n", "<leader>gsy", "<cmd> GoTagAdd yaml <CR>")
+vim.keymap.set("n", "<leader>gie", "<cmd> GoIfErr <CR>")
 
 local keymaps = {
     normal = {
         ["<C-s>"] = ":w<CR>",
-    }
+    },
 }
 
 --key_map(keymaps)
 
 function _G.set_terminal_keymaps()
     local opts = { buffer = 0 }
-    vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
-    vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
-    vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
-    vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
-    vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
-    vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+    vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
+    vim.keymap.set("t", "jk", [[<C-\><C-n>]], opts)
+    vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
+    vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
+    vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
+    vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
 end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
