@@ -1,7 +1,28 @@
-require 'nvim-treesitter.configs'.setup {
+require("nvim-treesitter.configs").setup({
     -- A list of parser names, or "all"
-    ensure_installed = { "help", "javascript", "typescript", "css", "dockerfile", "gitignore", "go", "svelte", "toml",
-        "vue", "yaml", "c", "rust" },
+    ensure_installed = {
+        "help",
+        "javascript",
+        "typescript",
+        "css",
+        "dockerfile",
+        "gitignore",
+        "go",
+        "gomod",
+        "gosum",
+        "gowork",
+        "svelte",
+        "toml",
+        "vue",
+        "yaml",
+        "c",
+        "rust",
+        "lua",
+        "scss",
+        "tsx",
+        "vue",
+        "markdown",
+    },
     -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
     -- Only required if you have packer configured as `opt`
@@ -32,6 +53,6 @@ require 'nvim-treesitter.configs'.setup {
         -- termcolors = {} -- table of colour name strings
     },
     context_commentstring = {
-        enable = true
-    }
-}
+        enable = true,
+    },
+})
