@@ -113,4 +113,13 @@ return require("packer").startup(function(use)
 			vim.cmd([[silent! GoInstallDeps]])
 		end,
 	})
+	use("mfussenegger/nvim-dap")
+	use({
+		"leoluz/nvim-dap-go",
+		ft = "go",
+		dependencies = "mfussenegger/nvim-dap",
+		config = function(_, otps)
+			require("dap-go").setup(otps)
+		end,
+	})
 end)

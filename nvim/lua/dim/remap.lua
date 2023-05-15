@@ -1,19 +1,19 @@
 vim.g.mapleader = " "
 function key_map(keys)
-    local modes = {
-        normal = "n",
-        insert = "i",
-        visual = "v",
-    }
+	local modes = {
+		normal = "n",
+		insert = "i",
+		visual = "v",
+	}
 
-    for mode, map in pairs(keys) do
-        local key_mode = modes[mode]
-        local opts = { noremap = true, silent = true }
+	for mode, map in pairs(keys) do
+		local key_mode = modes[mode]
+		local opts = { noremap = true, silent = true }
 
-        for key, value in pairs(map) do
-            vim.keymap.set(key_mode, key, value, opts)
-        end
-    end
+		for key, value in pairs(map) do
+			vim.keymap.set(key_mode, key, value, opts)
+		end
+	end
 end
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -28,10 +28,10 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
+	require("vim-with-me").StartVimWithMe()
 end)
 vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
+	require("vim-with-me").StopVimWithMe()
 end)
 
 -- greatest remap ever
@@ -61,23 +61,35 @@ vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>gsj", "<cmd> GoTagAdd json <CR>")
 vim.keymap.set("n", "<leader>gsy", "<cmd> GoTagAdd yaml <CR>")
 vim.keymap.set("n", "<leader>gie", "<cmd> GoIfErr <CR>")
+vim.keymap.set("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>")
+vim.keymap.set("n", "<leader>dus", function()
+	local widgets = require("dap.ui.widgets")
+	local sidebar = widgets.sidebar(widgets.scopes)
+	sidebar.open()
+end)
+vim.keymap.set("n", "<leader>dgt", function()
+	require("dap-go").debug_test()
+end)
+vim.keymap.set("n", "<leader>dgl", function()
+	require("dap-go").debug_last()
+end)
 
 local keymaps = {
-    normal = {
-        ["<C-s>"] = ":w<CR>",
-    },
+	normal = {
+		["<C-s>"] = ":w<CR>",
+	},
 }
 
 --key_map(keymaps)
 
 function _G.set_terminal_keymaps()
-    local opts = { buffer = 0 }
-    vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
-    vim.keymap.set("t", "jk", [[<C-\><C-n>]], opts)
-    vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
-    vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
-    vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
-    vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
+	local opts = { buffer = 0 }
+	vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
+	vim.keymap.set("t", "jk", [[<C-\><C-n>]], opts)
+	vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
+	vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
+	vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
+	vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
 end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
