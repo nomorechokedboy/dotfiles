@@ -122,4 +122,24 @@ return require("packer").startup(function(use)
 			require("dap-go").setup(otps)
 		end,
 	})
+	use({
+		"saecki/crates.nvim",
+		tag = "v0.3.0",
+		event = { "BufRead Cargo.toml" },
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("crates").setup({
+				avoid_prerelease = true,
+				date_format = "%d-%m-%Y",
+				disable_invalid_feature_diagnostic = true,
+				popup = {
+					autofocus = true,
+					border = "rounded",
+				},
+				null_ls = {
+					enabled = true,
+				},
+			})
+		end,
+	})
 end)
