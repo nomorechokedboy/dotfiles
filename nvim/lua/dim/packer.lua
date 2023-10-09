@@ -21,7 +21,7 @@ return require("packer").startup(function(use)
 			vim.cmd("colorscheme rose-pine")
 		end,
 	})
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", tag = "v0.9.0" })
 	use("p00f/nvim-ts-rainbow")
 	use("theprimeagen/harpoon")
 	use("mbbill/undotree")
@@ -55,6 +55,7 @@ return require("packer").startup(function(use)
 				"jayp0521/mason-null-ls.nvim",
 			},
 		},
+		branch = "v1.x",
 	})
 
 	-- Theme

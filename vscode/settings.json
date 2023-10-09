@@ -102,16 +102,17 @@
         ],
         "vim.leader": "<space>",
         "vim.handleKeys": {
-                "<C-a>": false,
+                // "<C-a>": false,
                 "<C-f>": false,
                 // VS Code new marker @ next occurence
-                "<C-d>": false,
+                // "<C-d>": false,
                 // Copy
-                "<C-c>": false,
-                "<C-x>": false,
+                // "<C-c>": false,
+                // "<C-x>": false,
                 // Paste
-                "<C-v>": false,
-                "<C-z>": false,
+                // "<C-v>": false,
+                // "<C-z>": false,
+                "<C-p>": false,
                 "<C-y>": false
         },
         "emmet.triggerExpansionOnTab": true,
@@ -208,7 +209,7 @@
         "window.titleBarStyle": "custom",
         "dart.flutterSdkPath": "/home/hadius/packages/flutter",
         "editor.cursorBlinking": "smooth",
-        "editor.cursorSmoothCaretAnimation": true,
+        "editor.cursorSmoothCaretAnimation": "on",
         "workbench.startupEditor": "none",
         "explorer.confirmDelete": false,
         "svelte.plugin.svelte.note-new-transformation": false,
@@ -229,5 +230,6 @@
         },
         "workbench.activityBar.visible": false,
         "go.toolsManagement.autoUpdate": true,
-        "diffEditor.ignoreTrimWhitespace": false
+        "diffEditor.ignoreTrimWhitespace": false,
+        "terminal.sourceControlRepositoriesKind": "external"
 }
