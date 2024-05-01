@@ -203,7 +203,7 @@
                 // current file when a language service does not provide its own completions.
                 // This results in code completion suggesting words when editing comments and
                 // strings. This setting will prevent that.
-                "editor.wordBasedSuggestions": false,
+                "editor.wordBasedSuggestions": "off",
                 "editor.defaultFormatter": "Dart-Code.dart-code"
         },
         "window.titleBarStyle": "custom",
@@ -228,8 +228,8 @@
         "[go]": {
                 "editor.defaultFormatter": "golang.go"
         },
-        "workbench.activityBar.visible": false,
         "go.toolsManagement.autoUpdate": true,
         "diffEditor.ignoreTrimWhitespace": false,
-        "terminal.sourceControlRepositoriesKind": "external"
+        "terminal.sourceControlRepositoriesKind": "external",
+        "workbench.activityBar.location": "hidden"
 }
