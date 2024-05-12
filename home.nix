@@ -12,6 +12,17 @@ let
 in
 
 {
+  xsession = {
+    enable = true;
+    windowManager = {
+      i3 = {
+        enable = true;
+      };
+    };
+  };
+
+  fonts.fontconfig.enable = true;
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home = {
@@ -51,6 +62,7 @@ in
       fzf
       git
       glab
+      go
       google-chrome
       i3
       imagemagick
@@ -69,7 +81,6 @@ in
       scrot
       starship
       vscode
-      zimfw
       zoxide
       # i3-rounded
 
@@ -99,7 +110,7 @@ in
       # # the Nix store. Activating the configuration will then make '~/.screenrc' a
       # # symlink to the Nix store copy.
       # ".screenrc".source = dotfiles/screenrc;
-      ".config/i3/config".source = ./i3/config;
+      # ".config/i3/config".source = ./i3/config;
       ".config/kitty/kitty.conf".source = ./kitty/kitty.conf;
       "Pictures/rick-morty.png".source = ./misc/rick-morty.png;
       ".local/bin/i3lock_blank" = {
