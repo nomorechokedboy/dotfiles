@@ -137,7 +137,7 @@ in
     #  /etc/profiles/per-user/hadius/etc/profile.d/hm-session-vars.sh
     #
     sessionVariables = {
-      EDITOR = "neovim";
+      # EDITOR = "nvim";
     };
 
     /* shellAliases = {

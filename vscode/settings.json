@@ -231,5 +231,6 @@
         "go.toolsManagement.autoUpdate": true,
         "diffEditor.ignoreTrimWhitespace": false,
         "terminal.sourceControlRepositoriesKind": "external",
-        "workbench.activityBar.location": "hidden"
+        "workbench.activityBar.location": "hidden",
+        "diffEditor.maxComputationTime": 0
 }
