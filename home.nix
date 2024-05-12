@@ -456,5 +456,9 @@ in
         ];
       };
     };
+
+    zoxide = {
+      enable = true;
+    };
   };
 }
