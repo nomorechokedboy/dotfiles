@@ -393,5 +393,9 @@ in
         zxh404.vscode-proto3
       ]; */
     };
+
+    starship = {
+      enable = true;
+    };
   };
 }
