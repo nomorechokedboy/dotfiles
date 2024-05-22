@@ -56,9 +56,12 @@ in
       # # Adds the 'hello' command to your environment. It prints a friendly
       # # "Hello, world!" when run.
       # hello
+      bison
       bun
+      busybox
       discord
       docker
+      firefox
       fzf
       git
       glab
@@ -67,6 +70,8 @@ in
       i3
       imagemagick
       jetbrains.goland
+      kubelogin
+      kubelogin-oidc
       kubernetes
       ncdu
       neovim
@@ -433,6 +438,9 @@ in
           }
           {
             name = "zimfw/git";
+          }
+          {
+            name = "zimfw/k";
           }
         ];
       };
