@@ -56,16 +56,20 @@ in
       # # Adds the 'hello' command to your environment. It prints a friendly
       # # "Hello, world!" when run.
       # hello
+      # busybox
+      # firefox
+      air
       bison
       bun
-      busybox
+      curl
+      degit
       discord
       docker
-      firefox
       fzf
       git
       glab
       go
+      go-swag
       google-chrome
       i3
       imagemagick
@@ -73,6 +77,7 @@ in
       kubelogin
       kubelogin-oidc
       kubernetes
+      kubernetes-helm
       ncdu
       neovim
       nerdfonts
@@ -85,7 +90,10 @@ in
       rustup
       scrot
       starship
+      templ
+      turso-cli
       vscode
+      wget
       zoxide
       # i3-rounded
 
@@ -260,6 +268,7 @@ in
               p.tree-sitter-vue
               p.tree-sitter-yaml
               p.tree-sitter-zig
+              p.tree-sitter-templ
             ]));
             config = toLuaFile ./nvim/plugin/treesitter.lua;
           }
@@ -267,6 +276,10 @@ in
           plenary-nvim
           nvim-web-devicons
           vim-fugitive
+          {
+            plugin = (fromGitHub "HEAD" "FabijanZulj/blame.nvim");
+            config = toLua "require(\"blame\").setup()";
+          }
           vim-wakatime
 
           {
@@ -347,6 +360,12 @@ in
 
           (fromGitHub "HEAD" "LunarVim/onedarker.nvim")
           onedark-nvim
+
+          # netwr
+          {
+            plugin = (fromGitHub "HEAD" "prichrd/netrw.nvim");
+            config = toLua "require(\"netrw\").setup({})";
+          }
         ];
 
         extraLuaConfig = ''
@@ -407,6 +426,12 @@ in
       enable = true;
       history.extended = true;
       syntaxHighlighting.enable = true;
+      initExtra = "
+          [[ -s \"/home/hadius/.gvm/scripts/gvm\" ]] && source \"/home/hadius/.gvm/scripts/gvm\"\n
+          export NVM_DIR=\"$HOME/.nvm\" \n
+          [ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"  # This loads nvm \n
+          [ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\"  # This loads nvm bash_completion \n
+      ";
       prezto = {
         enable = true;
         editor = {
@@ -414,6 +439,7 @@ in
           promptContext = true;
         };
         pmodules = [
+          "autosuggestions"
           "completion"
           "directory"
           "docker"
@@ -431,16 +457,13 @@ in
 
         plugins = [
           {
-            name = "zsh-users/zsh-history-substring-search";
-          }
-          {
-            name = "zsh-users/zsh-autosuggestions";
-          }
-          {
-            name = "zimfw/git";
+            name = "zsh-users/zsh-syntax-highlighting";
           }
           {
             name = "zimfw/k";
+          }
+          {
+            name = "zimfw/git";
           }
         ];
       };

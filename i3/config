@@ -244,8 +244,7 @@ focus_wrapping force
 # Return to previous workspace
 workspace_auto_back_and_forth yes
 
-#bindsym Control+$mod+l exec betterlockscreen -l dimblur --display 1
-bindsym Control+$mod+l exec i3lock_blank
+bindsym Control+$mod+l exec i3lock_blank && systemctl suspend
 
 bindsym $mod+x exec redshift -x
 bindsym $mod+c exec redshift -P -O 2500

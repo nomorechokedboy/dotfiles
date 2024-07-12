@@ -47,6 +47,8 @@ require("mason-lspconfig").setup({
 		"grammarly",
 		"sqls",
 		"emmet_ls",
+		"templ",
+		"html",
 	},
 	handlers = {
 		function(server_name) -- default handler (optional)
@@ -169,4 +171,24 @@ vim.diagnostic.config({
 		header = "",
 		prefix = "",
 	},
+})
+
+-- templ setupt
+--[[ lsp.html.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "html", "templ" },
+})
+
+lsp.htmx.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "html", "templ" },
+}) ]]
+
+lsp.tailwindcss.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "templ", "astro", "javascript", "typescript", "react", "vue", "svelte" },
+	init_options = { userLanguages = { templ = "html" } },
 })
