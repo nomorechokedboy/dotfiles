@@ -173,7 +173,7 @@ vim.diagnostic.config({
 	},
 })
 
--- templ setupt
+-- templ setup
 --[[ lsp.html.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -192,3 +192,6 @@ lsp.tailwindcss.setup({
 	filetypes = { "templ", "astro", "javascript", "typescript", "react", "vue", "svelte" },
 	init_options = { userLanguages = { templ = "html" } },
 })
+
+-- gleam setup
+lsp.gleam.setup({})

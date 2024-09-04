@@ -78,11 +78,13 @@ in
       kubelogin-oidc
       kubernetes
       kubernetes-helm
+      minikube
       ncdu
       neovim
       nerdfonts
       nodejs_20
       obsidian
+      pnpm
       postman
       protobuf
       ripgrep
@@ -91,12 +93,18 @@ in
       scrot
       starship
       templ
+      terraform
       turso-cli
       vscode
       wget
+      xclip
       zoxide
       # i3-rounded
 
+      # gleam installation
+      gleam
+      erlang
+      rebar3
 
       # # It is sometimes useful to fine-tune packages, for example, by applying
       # # overrides. You can do that directly here, just don't forget the
@@ -241,6 +249,7 @@ in
               p.tree-sitter-comment
               p.tree-sitter-css
               p.tree-sitter-dockerfile
+              p.tree-sitter-gleam
               p.tree-sitter-go
               p.tree-sitter-gomod
               p.tree-sitter-gowork
@@ -261,6 +270,8 @@ in
               p.tree-sitter-scss
               p.tree-sitter-sql
               p.tree-sitter-svelte
+              p.tree-sitter-templ
+              p.tree-sitter-terraform
               p.tree-sitter-toml
               p.tree-sitter-tsx
               p.tree-sitter-typescript
@@ -268,7 +279,6 @@ in
               p.tree-sitter-vue
               p.tree-sitter-yaml
               p.tree-sitter-zig
-              p.tree-sitter-templ
             ]));
             config = toLuaFile ./nvim/plugin/treesitter.lua;
           }
