@@ -109,6 +109,18 @@ in
       erlang_26
       rebar3
 
+      # tauri
+      pkg-config
+      dbus
+      openssl_3
+      glib
+      gtk3
+      libsoup
+      webkitgtk
+      appimagekit
+      librsvg
+
+
       # # It is sometimes useful to fine-tune packages, for example, by applying
       # # overrides. You can do that directly here, just don't forget the
       # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -161,7 +173,22 @@ in
     #  /etc/profiles/per-user/hadius/etc/profile.d/hm-session-vars.sh
     #
     sessionVariables = {
-      # EDITOR = "nvim";
+      EDITOR = "nvim";
+
+      LD_LIBRARY_PATH = with pkgs; lib.makeLibraryPath [
+        webkitgtk
+        gtk3
+        cairo
+        gdk-pixbuf
+        glib
+        dbus
+        openssl_3
+        librsvg
+      ];
+
+      XDG_DATA_DIRS = with pkgs; ''
+        ${gsettings-desktop-schemas}/share/gsettings-schemas/${gsettings-desktop-schemas.name}:${gtk3}/share/gsettings-schemas/${gtk3.name}:$XDG_DATA_DIRS
+      '';
     };
 
     /* shellAliases = {
