@@ -174,24 +174,48 @@ vim.diagnostic.config({
 })
 
 -- templ setup
---[[ lsp.html.setup({
+lsp.html.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	filetypes = { "html", "templ" },
+	filetypes = { "html", "templ", "rust" },
 })
 
 lsp.htmx.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	filetypes = { "html", "templ" },
-}) ]]
+})
 
 lsp.tailwindcss.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	filetypes = { "templ", "astro", "javascript", "typescript", "react", "vue", "svelte" },
+	filetypes = { "templ", "astro", "javascript", "typescript", "react", "vue", "svelte", "rust" },
 	init_options = { userLanguages = { templ = "html" } },
 })
 
 -- gleam setup
 lsp.gleam.setup({})
+
+lsp.rust_analyzer.setup({
+	-- Other Configs ...
+	settings = {
+		["rust-analyzer"] = {
+			-- Other Settings ...
+			procMacro = {
+				ignored = {
+					leptos_macro = {
+						-- optional: --
+						-- "component",
+						"server",
+					},
+				},
+			},
+		},
+	},
+})
+
+lsp.emmet_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "html", "templ", "rust" },
+})
