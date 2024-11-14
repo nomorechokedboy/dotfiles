@@ -58,8 +58,11 @@ in
       # hello
       # busybox
       # firefox
+      (nerdfonts.override { fonts = [ "Meslo" ]; })
       air
+      arandr
       bison
+      bottom
       bun
       curl
       degit
@@ -71,9 +74,9 @@ in
       go
       go-swag
       google-chrome
-      i3
+      graphviz
       imagemagick
-      jetbrains.goland
+      inotify-tools
       kubelogin
       kubelogin-oidc
       kubernetes
@@ -81,7 +84,6 @@ in
       minikube
       ncdu
       neovim
-      nerdfonts
       nodejs_20
       obsidian
       pnpm
@@ -97,13 +99,14 @@ in
       turso-cli
       vscode
       wget
+      wrk
       xclip
       zoxide
       # i3-rounded
 
       # gleam installation
       gleam
-      erlang
+      erlang_26
       rebar3
 
       # # It is sometimes useful to fine-tune packages, for example, by applying
