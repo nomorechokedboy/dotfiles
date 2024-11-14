@@ -288,3 +288,9 @@ mode "swap" {
 
 bindsym $mod+Shift+i mark --add "swapee"; mode "swap"
 
+# multi monitors
+bindsym $mod+m exec xrandr --output eDP-1 --auto --output HDMI-1 --auto --left-of eDP-1
+bindsym $mod+Shift+m exec xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate left
+bindsym $mod+n exec xrandr --output eDP-1 --auto --output HDMI-1 --off
+bindsym $mod+Shift+n exec xrandr --output eDP-1 --auto
+
