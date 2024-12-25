@@ -72,6 +72,7 @@ in
       git
       glab
       go
+      go-migrate
       go-swag
       google-chrome
       graphviz
@@ -85,6 +86,7 @@ in
       ncdu
       neovim
       nodejs_20
+      obs-studio
       obsidian
       pnpm
       postman
@@ -274,6 +276,7 @@ in
 
           {
             plugin = (nvim-treesitter.withPlugins (p: [
+              p.tree-sitter-astro
               p.tree-sitter-bash
               p.tree-sitter-cmake
               p.tree-sitter-comment
