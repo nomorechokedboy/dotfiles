@@ -39,6 +39,6 @@ require("presence"):setup({
 	log_level = log_levels.none,
 	client_id = client_id.my_client,
 	workspace_text = function()
-		return "Average rust enjoyer"
+		return "Average go enjoyer"
 	end,
 })
