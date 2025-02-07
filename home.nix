@@ -331,11 +331,6 @@ in
           }
 
           {
-            plugin = undotree;
-            config = toLua "vim.keymap.set(\"n\", \"<leader>u\", vim.cmd.UndotreeToggle)";
-          }
-
-          {
             plugin = toggleterm-nvim;
             config = toLuaFile ./nvim/plugin/toggleterm.lua;
           }
@@ -359,6 +354,7 @@ in
             plugin = telescope-nvim;
             config = toLuaFile ./nvim/plugin/telescope.lua;
           }
+          telescope-undo-nvim
 
           {
             plugin = nvim-autopairs;
