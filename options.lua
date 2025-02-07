@@ -150,6 +150,7 @@ vim.keymap.set("n", "<leader>ps", function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 vim.keymap.set("n", "<leader>th", builtin.colorscheme)
+vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>")
 
 -- add templ filetype
 vim.filetype.add({ extension = { templ = "templ" } })
